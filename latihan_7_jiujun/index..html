@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="login-container">   
+        <div class="login-header">header
+        </div>
+        <div class="login-body">                
+            <form method="POST" action="login.html">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="user" placeholder="" required>
+                </div>
+                <div class="input-group input-group-password">
+                    <label for="password">Password</label>
+                    <input id="password" type="password" name="pass" placeholder="" required>
+                    <img src="assets/mata tertutup.png." alt="Show Password" class="toggle-password" id="toggle-password">
+                </div>
+                <button type="submit"><marquee behavior="" direction="">submit</marquee></button>
+            </form>
+        </div>
+    </div>
+
+</body>
+<script src="script.js"></script>
+</html>

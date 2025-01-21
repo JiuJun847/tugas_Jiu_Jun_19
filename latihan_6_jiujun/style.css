@@ -1,0 +1,160 @@
+/* Reset Margin dan Padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333333;
+}
+
+/* Sidebar Atas */
+.top-sidebar {
+    background-color: hsl(249, 39%, 49%);
+    color: #000;
+    padding: 15px 20px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    z-index: 1000;
+}
+
+/* Wrapper Layout */
+.container {
+    display: flex;
+    margin-top: 60px; /* Hindari tumpang tindih dengan sidebar atas */
+}
+
+/* Sidebar Kiri */
+.left-sidebar {
+    background-color: #333;
+    color: white;
+    width: 250px;
+    height: calc(100vh - 60px); /* Kurangi tinggi sidebar atas */
+    position: fixed;
+    top: 60px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.left-sidebar button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 15px;
+    margin-bottom: 15px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.left-sidebar button:hover {
+    background-color: #555;
+}
+
+/* Form Container */
+.form-container {
+    margin-left: 270px; /* Memberikan ruang untuk sidebar kiri */
+    padding: 40px;
+    flex: 1;
+    background-color: #ffffff;
+    min-height: calc(100vh - 60px); /* Kurangi tinggi sidebar atas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.form-container h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #4CAF50;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.form-group textarea {
+    resize: none;
+    height: 120px;
+}
+
+.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .left-sidebar {
+        width: 200px;
+    }
+
+    .form-container {
+        margin-left: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .left-sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .form-container {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+    
+}

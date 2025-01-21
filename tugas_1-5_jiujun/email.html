@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoluntApp Email</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="logo-email">
+      <img src="assets/w.jpeg" alt="Logo VoluntApp">
+    </div>
+    <h1 class="title-email">VoluntApp</h1>
+    <form>
+      <div class="form-group-email ">
+        <img class="input-icon-email" src="assets/user.png" alt="Username Icon">
+        <input type="text" class="input-field-email " placeholder="Username">
+      </div>
+      <div class="form-group-email">
+        <img class="input-icon-email" src="assets/email.png" alt="Email Icon">
+        <input type="email" class="input-field-email" placeholder="Email">
+      </div>
+      <div class="form-group-email">
+        <img class="input-icon-email" src="assets/shield.png" alt="Password Icon">
+        <input type="text" class="input-field-email" placeholder="Password">
+        <img class="password-toggle-email" src="asset/view.png" alt="Toggle Password">
+      </div>      
+      <button type="submit" class="signup-btn-email">SIGN UP</button>
+      <div class="box-email">
+        <input type="checkbox" id="box" />
+        <label for="box">
+          <div class="line1-email">By clicking this form, you agree</div>
+          <div class="line2-email">with our <a href="#">Privacy Policy</a> and</div>
+          <div class="line3-email"><a href="#">Terms & Conditions</a></div>
+        </label>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    document.querySelector(".password-toggle-email").addEventListener("click", function () {
+      const passwordInput = this.previousElementSibling;
+      const isPassword = passwordInput.type === "password";
+      passwordInput.type = isPassword ? "text" : "password";
+    
+      
+      this.src = isPassword ? "asset/view.png" : "asset/hide.png";
+    });
+    
+    
+  </script>
+</body>
+</html>
